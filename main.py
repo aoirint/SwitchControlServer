@@ -32,22 +32,26 @@ data = {
 }
 
 while True:
-    print('Neutral')
-    data['leftX'] = 127
-    send(data)
-    time.sleep(0.5)
-
     print('Left')
     data['leftX'] = 0
+    data['leftY'] = 127
     send(data)
     time.sleep(0.5)
 
-    print('Neutral')
+    print('Down')
     data['leftX'] = 127
+    data['leftY'] = 255
     send(data)
     time.sleep(0.5)
 
     print('Right')
     data['leftX'] = 255
+    data['leftY'] = 127
+    send(data)
+    time.sleep(0.5)
+
+    print('Up')
+    data['leftX'] = 127
+    data['leftY'] = 0
     send(data)
     time.sleep(0.5)
